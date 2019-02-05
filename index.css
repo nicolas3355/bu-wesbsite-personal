@@ -1,0 +1,60 @@
+body{
+    background-color: #dad2e0;
+}
+
+
+/* let's make the list horizontal */
+ul { 
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  padding: 8px;
+}
+
+#img_me{
+    box-shadow: 0.1em 0.1em 0.5em;
+}
+
+/* let's make it responsive and add breakpoints depending on the resolution */
+#container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* put the pic in the center */
+#image{
+    text-align: center;
+}
+
+/* take the full width by default */
+.box{
+    width: 100%;
+}
+
+/* if the screen is 600 px and up, let's fit the pic next to the text */
+@media screen and (min-width: 600px) {
+    #image{
+        width: 50%;
+    }
+    #text {
+        width: 50%;
+    }
+}
+
+/* fix the margins if it's more than 800px and center the container in the center */
+@media screen and (min-width: 800px){
+    #container{
+        width: 800px;
+        margin: auto;
+        margin-top: 20px;
+    }
+}
